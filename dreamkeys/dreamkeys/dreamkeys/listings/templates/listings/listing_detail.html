@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ listing.title|default:"Без назви" }}</h2>
+    <p>{{ listing.description|default:"Опис відсутній" }}</p>
+    <p><strong>Ціна:</strong> {{ listing.price|default:"Невідомо" }} ₴</p>
+    <p><strong>Розташування:</strong> {{ listing.location|default:"Не вказано" }}</p>
+
+    {% if listing.owner and listing.owner == request.user %}
+        <a href="{% url 'listing_update' listing.pk %}">Редагувати</a> |
+        <a href="{% url 'listing_delete' listing.pk %}">Видалити</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamKeys - Оголошення про нерухомість</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ласкаво просимо на сайт DreamKeys!</h1>
+        <p>Знаходьте, продавайте або орендуйте нерухомість швидко та зручно.</p>
+        <nav>
+            <a href="{% url 'listings' %}">Переглянути оголошення</a> |
+            <a href="{% url 'listing_create' %}">Додати оголошення</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Додайте своє оголошення</h2>
+            <p>Опишіть вашу нерухомість, завантажте зображення та залиште контакти.</p>
+            <a href="{% url 'listing_create' %}">
+                <button>Створити оголошення</button>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DreamKeys. Всі права захищені.</p>
+    </footer>
+</body>
+</html>

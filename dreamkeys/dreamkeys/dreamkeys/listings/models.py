@@ -31,7 +31,7 @@ class Listing(models.Model):
     def __str__(self):
         return self.title
 
-# Модель изображения для объявлений
+
 class ListingImage(models.Model):
     listing = models.ForeignKey(Listing, related_name="images", on_delete=models.CASCADE)
     image = models.ImageField(upload_to='listings/%Y/%m/%d/')

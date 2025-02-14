@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Вхід - DreamKeys{% endblock %}
+
+{% block content %}
+<h1>Вхід на DreamKeys</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Увійти</button>
+</form>
+
+<p>Ще не маєш акаунта? <a href="{% url 'register' %}">Зареєструватися</a></p>
+
+{% endblock %}
